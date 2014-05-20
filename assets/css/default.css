@@ -1,0 +1,137 @@
+@import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
+/* line 17, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../../src/scss/default.scss */
+body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  background: #000E1F;
+  color: white;
+}
+
+/* line 16, ../../src/scss/default.scss */
+.container {
+  position: relative;
+}
+
+/* line 21, ../../src/scss/default.scss */
+.debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+}
+
+/* line 29, ../../src/scss/default.scss */
+.clock-container {
+  perspective: 1000;
+  margin: 25% 25% 0;
+  background: #181F30;
+  opacity: 1;
+  -webkit-box-shadow: 1em 1em 2em #000;
+  position: relative;
+  -webkit-transition: all linear 0.25s;
+  -moz-transition: all  linear 0.25s;
+  -o-transition: all  linear 0.25s;
+  transition: all  linear 0.25s;
+}
+/* line 41, ../../src/scss/default.scss */
+.clock-container ul {
+  padding: 5%;
+  font-family: "Black Ops One", cursive;
+  font-size: 6em;
+}
+/* line 45, ../../src/scss/default.scss */
+.clock-container ul li {
+  display: block;
+  letter-spacing: 150%;
+  line-height: 100%;
+  text-align: left;
+}
+/* line 51, ../../src/scss/default.scss */
+.clock-container ul .day-night {
+  font-size: 0.25em;
+  letter-spacing: auto;
+  text-align: right;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 60, ../../src/scss/default.scss */
+  .clock-container {
+    margin: 0 15%;
+  }
+  /* line 63, ../../src/scss/default.scss */
+  .clock-container ul {
+    width: 100%;
+    font-size: 4em;
+    overflow: hidden;
+  }
+  /* line 67, ../../src/scss/default.scss */
+  .clock-container ul li {
+    float: left;
+    margin-left: 5%;
+  }
+}

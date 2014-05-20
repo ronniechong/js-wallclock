@@ -1,0 +1,74 @@
+@import "compass/reset";
+//@import url(http://fonts.googleapis.com/css?family=Monofett);
+@import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
+
+
+$clock-font:'Black Ops One', cursive;
+$clock-font-size:6em;
+
+body{
+	font-family: arial, sans-serif;
+	font-size:16px;
+	background:#000E1F;
+	color:#fff
+}
+
+.container{
+	position:relative;
+
+}
+
+.debug{
+	position:fixed;
+	top:0;
+	left:0;
+	font-size:11px;
+
+}
+
+.clock-container{
+	perspective: 1000;
+	margin:25% 25% 0;
+	background:#181F30;
+	opacity:1;
+	-webkit-box-shadow:1em 1em 2em #000;
+	position:relative;
+	 -webkit-transition: all linear 0.25s;
+    -moz-transition: all  linear 0.25s;
+    -o-transition: all  linear 0.25s;
+    transition: all  linear 0.25s;
+
+	ul{
+		padding:5%;
+		font-family: $clock-font;
+		font-size:$clock-font-size;
+		li{
+			display:block;
+			letter-spacing: 150%;
+			line-height: 100%;
+			text-align: left;
+		}
+		.day-night{
+			font-size:0.25em;
+			letter-spacing:auto;
+			text-align:right;
+		}
+	}
+}
+
+@media only screen and (orientation: landscape) {
+	.clock-container{
+		margin:0 15%;
+		
+		ul{
+			width:100%;
+			font-size:$clock-font-size - 2em;
+			overflow:hidden;
+			li{
+				float:left;
+				margin-left:5%;
+			}
+		}
+	}
+
+}
