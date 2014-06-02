@@ -1,5 +1,4 @@
 @import "compass/reset";
-//@import url(http://fonts.googleapis.com/css?family=Monofett);
 @import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
 
 
@@ -13,6 +12,18 @@ body{
 	color:#fff
 }
 
+h1{
+	text-transform:uppercase;
+	font-size:1.8em;
+	margin-bottom:0.5em;
+}
+
+p{
+	line-height:120%;
+	margin-bottom:0.5em;
+	font-size:1.2em;
+}
+
 .container{
 	position:relative;
 
@@ -23,10 +34,17 @@ body{
 	top:0;
 	left:0;
 	font-size:11px;
+}
 
+#info{
+	display:block;
+	font-family:Arial,sans-serif;
+	text-align:center;
+	margin:25% 10%;
 }
 
 .clock-container{
+	display:none;
 	perspective: 1000;
 	margin:25% 25% 0;
 	background:#181F30;
@@ -70,5 +88,4 @@ body{
 			}
 		}
 	}
-
 }

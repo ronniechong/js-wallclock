@@ -4,9 +4,6 @@
     <title>JS Wallclock</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <script type="text/javascript" src="assets/js/wallclock.js"></script>
-    <link href="assets/css/default.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript"></script>
   </head>
   <body>
     <div class="container">
@@ -23,6 +20,17 @@
         <div id="output"></div>
         <div id="more"></div>
       </div>
+      <div id="info">
+        <h1>JS Wallclock</h1>
+        <p>This script is to experiment with your mobile native accelerometer.</p>
+        <p>You will need a compatible device to test this page. Try and load this page with your mobile</p>
+      </div>
     </div>
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/js/wallclock.js"></script>
+    <script type="text/javascript">
+      var wallClock = new wallClock();
+      wallClock.init();
+    </script>
   </body>
 </html>

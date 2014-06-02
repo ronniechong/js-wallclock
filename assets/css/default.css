@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 9, ../../src/scss/default.scss */
+/* line 8, ../../src/scss/default.scss */
 body {
   font-family: arial, sans-serif;
   font-size: 16px;
@@ -72,12 +72,26 @@ body {
   color: white;
 }
 
-/* line 16, ../../src/scss/default.scss */
+/* line 15, ../../src/scss/default.scss */
+h1 {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+/* line 21, ../../src/scss/default.scss */
+p {
+  line-height: 120%;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+/* line 27, ../../src/scss/default.scss */
 .container {
   position: relative;
 }
 
-/* line 21, ../../src/scss/default.scss */
+/* line 32, ../../src/scss/default.scss */
 .debug {
   position: fixed;
   top: 0;
@@ -85,8 +99,17 @@ body {
   font-size: 11px;
 }
 
-/* line 29, ../../src/scss/default.scss */
+/* line 39, ../../src/scss/default.scss */
+#info {
+  display: block;
+  font-family: Arial,sans-serif;
+  text-align: center;
+  margin: 25% 10%;
+}
+
+/* line 46, ../../src/scss/default.scss */
 .clock-container {
+  display: none;
   perspective: 1000;
   margin: 25% 25% 0;
   background: #181F30;
@@ -98,20 +121,20 @@ body {
   -o-transition: all  linear 0.25s;
   transition: all  linear 0.25s;
 }
-/* line 41, ../../src/scss/default.scss */
+/* line 59, ../../src/scss/default.scss */
 .clock-container ul {
   padding: 5%;
   font-family: "Black Ops One", cursive;
   font-size: 6em;
 }
-/* line 45, ../../src/scss/default.scss */
+/* line 63, ../../src/scss/default.scss */
 .clock-container ul li {
   display: block;
   letter-spacing: 150%;
   line-height: 100%;
   text-align: left;
 }
-/* line 51, ../../src/scss/default.scss */
+/* line 69, ../../src/scss/default.scss */
 .clock-container ul .day-night {
   font-size: 0.25em;
   letter-spacing: auto;
@@ -119,17 +142,17 @@ body {
 }
 
 @media only screen and (orientation: landscape) {
-  /* line 60, ../../src/scss/default.scss */
+  /* line 78, ../../src/scss/default.scss */
   .clock-container {
     margin: 0 15%;
   }
-  /* line 63, ../../src/scss/default.scss */
+  /* line 81, ../../src/scss/default.scss */
   .clock-container ul {
     width: 100%;
     font-size: 4em;
     overflow: hidden;
   }
-  /* line 67, ../../src/scss/default.scss */
+  /* line 85, ../../src/scss/default.scss */
   .clock-container ul li {
     float: left;
     margin-left: 5%;
