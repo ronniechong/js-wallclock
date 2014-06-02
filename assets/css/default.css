@@ -89,9 +89,11 @@ p {
 /* line 27, ../../src/scss/default.scss */
 .container {
   position: relative;
+  height: auto;
+  min-height: 100%;
 }
 
-/* line 32, ../../src/scss/default.scss */
+/* line 34, ../../src/scss/default.scss */
 .debug {
   position: fixed;
   top: 0;
@@ -99,7 +101,7 @@ p {
   font-size: 11px;
 }
 
-/* line 39, ../../src/scss/default.scss */
+/* line 41, ../../src/scss/default.scss */
 #info {
   display: block;
   font-family: Arial,sans-serif;
@@ -107,11 +109,11 @@ p {
   margin: 25% 10%;
 }
 
-/* line 46, ../../src/scss/default.scss */
+/* line 48, ../../src/scss/default.scss */
 .clock-container {
   display: none;
   perspective: 1000;
-  margin: 25% 25% 0;
+  margin: 2% 2% 0;
   background: #181F30;
   opacity: 1;
   -webkit-box-shadow: 1em 1em 2em #000;
@@ -121,20 +123,20 @@ p {
   -o-transition: all  linear 0.25s;
   transition: all  linear 0.25s;
 }
-/* line 59, ../../src/scss/default.scss */
+/* line 61, ../../src/scss/default.scss */
 .clock-container ul {
   padding: 5%;
   font-family: "Black Ops One", cursive;
   font-size: 6em;
 }
-/* line 63, ../../src/scss/default.scss */
+/* line 65, ../../src/scss/default.scss */
 .clock-container ul li {
   display: block;
   letter-spacing: 150%;
   line-height: 100%;
   text-align: left;
 }
-/* line 69, ../../src/scss/default.scss */
+/* line 71, ../../src/scss/default.scss */
 .clock-container ul .day-night {
   font-size: 0.25em;
   letter-spacing: auto;
@@ -142,17 +144,17 @@ p {
 }
 
 @media only screen and (orientation: landscape) {
-  /* line 78, ../../src/scss/default.scss */
+  /* line 80, ../../src/scss/default.scss */
   .clock-container {
     margin: 0 15%;
   }
-  /* line 81, ../../src/scss/default.scss */
+  /* line 83, ../../src/scss/default.scss */
   .clock-container ul {
     width: 100%;
     font-size: 4em;
     overflow: hidden;
   }
-  /* line 85, ../../src/scss/default.scss */
+  /* line 87, ../../src/scss/default.scss */
   .clock-container ul li {
     float: left;
     margin-left: 5%;

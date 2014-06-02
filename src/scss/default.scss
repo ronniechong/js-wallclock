@@ -26,6 +26,8 @@ p{
 
 .container{
 	position:relative;
+	height:auto;
+	min-height:100%;
 
 }
 
@@ -46,7 +48,7 @@ p{
 .clock-container{
 	display:none;
 	perspective: 1000;
-	margin:25% 25% 0;
+	margin:2% 2% 0;
 	background:#181F30;
 	opacity:1;
 	-webkit-box-shadow:1em 1em 2em #000;
