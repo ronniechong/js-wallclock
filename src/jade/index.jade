@@ -4,8 +4,6 @@ html
 		title JS Wallclock
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-		
-
 	body
 		.container
 			.clock-container#wallclock
@@ -27,5 +25,5 @@ html
 		link(href="assets/css/default.css" rel="stylesheet" type="text/css")
 		script(type="text/javascript" src="assets/js/wallclock.js")
 		script(type="text/javascript").
-			var wallClock = new wallClock();
+			var wallClock = new wallClock(50);
 			wallClock.init();

@@ -1,9 +1,10 @@
 @import "compass/reset";
-@import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
 
+@import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
 
 $clock-font:'Black Ops One', cursive;
 $clock-font-size:6em;
+
 html,
 body{
 	height:100%;
@@ -54,7 +55,7 @@ p{
 	perspective: 1000;
 	background:#181F30;
 	opacity:1;
-	-webkit-box-shadow:1em 1em 2em #000;
+	-webkit-box-shadow:2em 2em 3em #000;
 	position:relative;
 	 -webkit-transition: all linear 0.25s;
     -moz-transition: all  linear 0.25s;

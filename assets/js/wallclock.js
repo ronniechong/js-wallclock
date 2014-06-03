@@ -1,21 +1,20 @@
 
-function wallClock(){
+function wallClock(offval){
 	
-
 	//Properties
 	this.version = '1.0';
-	var offset = 50;
+	this.offset = offval;	//offset rotatex and rotatey
 
 	//Methods
 	this.init = function(){
 		'user strict';
 		//Check for mobile
-		//if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  			var clockTimer = setInterval(this.fnUpdateTime, 1000);	
 			document.getElementById('wallclock').style.display = "block";
 			document.getElementById('info').style.display = "none";
 			this.fnMotionDevice();
-		//}
+		}
 	}
 
 	//Get time
@@ -56,13 +55,10 @@ function wallClock(){
 		'use strict';
 		if (typeof(param1)==='object'){
 			document.getElementById('output').innerHTML = 'Tilt: Y='+Math.round(param1[0]) + ', X=' + Math.round(param1[1]);
-			var rotX = Math.round(param1[0]),
-				rotY = Math.round(param1[1]);
-			//document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
-			//document.getElementById('wallclock').style.transform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
+			var rotX = (window.orientation==0) ? Math.round(param1[0] - this.offset):Math.round(param1[0]),
+				rotY = (window.orientation==0) ? Math.round(param1[1]) : Math.round(param1[1]+this.offset);
 			document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
 			document.getElementById('wallclock').style.transform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
-			//document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+Math.round((param1[1])*-1)+'deg)';
 		}
 	}
 }
