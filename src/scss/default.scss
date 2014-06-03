@@ -4,12 +4,16 @@
 
 $clock-font:'Black Ops One', cursive;
 $clock-font-size:6em;
+html,
+body{
+	height:100%;
+}
 
 body{
 	font-family: arial, sans-serif;
 	font-size:16px;
 	background:#000E1F;
-	color:#fff
+	color:#fff;
 }
 
 h1{
@@ -26,9 +30,8 @@ p{
 
 .container{
 	position:relative;
-	height:auto;
-	min-height:100%;
-
+	overflow:hidden;
+	height:100%;
 }
 
 .debug{
@@ -42,13 +45,13 @@ p{
 	display:block;
 	font-family:Arial,sans-serif;
 	text-align:center;
-	margin:25% 10%;
+	padding:25% 10%;
 }
 
 .clock-container{
 	display:none;
+	height:100%;
 	perspective: 1000;
-	margin:2% 2% 0;
 	background:#181F30;
 	opacity:1;
 	-webkit-box-shadow:1em 1em 2em #000;
@@ -67,9 +70,11 @@ p{
 			letter-spacing: 150%;
 			line-height: 100%;
 			text-align: left;
+			font-size:35vw;
 		}
 		.day-night{
 			font-size:0.25em;
+			font-size:15vw;
 			letter-spacing:auto;
 			text-align:right;
 		}
@@ -78,16 +83,15 @@ p{
 
 @media only screen and (orientation: landscape) {
 	.clock-container{
-		margin:0 15%;
-		
 		ul{
 			width:100%;
-			font-size:$clock-font-size - 2em;
 			overflow:hidden;
 			li{
 				float:left;
 				margin-left:5%;
+				font-size:23vw;
 			}
+			.sec{clear:left;}
 		}
 	}
 }

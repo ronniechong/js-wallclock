@@ -3,19 +3,22 @@ function wallClock(){
 	
 
 	//Properties
-
 	this.version = '1.0';
+	var offset = 50;
 
 	//Methods
 	this.init = function(){
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		'user strict';
+		//Check for mobile
+		//if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  			var clockTimer = setInterval(this.fnUpdateTime, 1000);	
 			document.getElementById('wallclock').style.display = "block";
 			document.getElementById('info').style.display = "none";
 			this.fnMotionDevice();
-		}
+		//}
 	}
 
+	//Get time
 	this.fnUpdateTime = function(){
 		'use strict';
 		var currDate = new Date(),
@@ -30,6 +33,7 @@ function wallClock(){
 		document.getElementsByClassName('day-night')[0].innerHTML = dayNight;
 	}
 
+	//Motion listeners
 	this.fnMotionDevice = function(){
 		var that = this;
 		if (window.DeviceOrientationEvent) {
@@ -45,20 +49,20 @@ function wallClock(){
 		        that.fnDetectTilt([orientation.x * 50, orientation.y * 50]);
 		    }, true);
 		}
-
 	}
+
+	//Animate wallclock
 	this.fnDetectTilt = function(param1, param2){
 		'use strict';
 		if (typeof(param1)==='object'){
 			document.getElementById('output').innerHTML = 'Tilt: Y='+Math.round(param1[0]) + ', X=' + Math.round(param1[1]);
 			var rotX = Math.round(param1[0]),
 				rotY = Math.round(param1[1]);
+			//document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
+			//document.getElementById('wallclock').style.transform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
 			document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
 			document.getElementById('wallclock').style.transform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
 			//document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+Math.round((param1[1])*-1)+'deg)';
-			
-		}else{
-			document.getElementById('output').innerHTML = param1 + ',' + param2;
 		}
 	}
 }
