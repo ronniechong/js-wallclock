@@ -1,44 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Js-wallclock by ronniechong</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>JS Wallclock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Js-wallclock</h1>
-        <p>Experimentation on mobile motion event</p>
-
-        <p class="view"><a href="https://github.com/ronniechong/js-wallclock">View the Project on GitHub <small>ronniechong/js-wallclock</small></a></p>
-
-
+    <div class="container">
+      <div id="wallclock" class="clock-container">
         <ul>
-          <li><a href="https://github.com/ronniechong/js-wallclock/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ronniechong/js-wallclock/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/ronniechong/js-wallclock">View On <strong>GitHub</strong></a></li>
+          <li class="hour">00</li>
+          <li class="min">00</li>
+          <li class="sec">00</li>
+          <li class="day-night">am</li>
         </ul>
-      </header>
-      <section>
-        <h1>
-<a name="js-wallclock" class="anchor" href="#js-wallclock"><span class="octicon octicon-link"></span></a>js-wallclock</h1>
-
-<p>Experimentation on mobile motion event</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/ronniechong">ronniechong</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+      </div>
+      <div class="debug">
+        <div id="type"></div>
+        <div id="output"></div>
+        <div id="more"></div>
+      </div>
+      <div id="info">
+        <h1>JS Wallclock</h1>
+        <p>This script is to experiment with your mobile native accelerometer.</p>
+        <p>You will need a compatible device to test this page. Try and load this page with your mobile</p>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <link href="https://rawgit.com/ronniechong/js-wallclock/master/assets/css/default.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://rawgit.com/ronniechong/js-wallclock/master/assets/js/wallclock.js"></script>
+    <script type="text/javascript">
+      var wallClock = new wallClock(50);
+      wallClock.init();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
+      ga('create', 'UA-51603977-1', 'ronniechong.github.io');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
