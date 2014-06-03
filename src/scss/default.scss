@@ -53,9 +53,9 @@ p{
 	display:none;
 	height:100%;
 	perspective: 1000;
-	background:#181F30;
+	background:transparent;
 	opacity:1;
-	-webkit-box-shadow:2em 2em 3em #000;
+	
 	position:relative;
 	 -webkit-transition: all linear 0.25s;
     -moz-transition: all  linear 0.25s;
@@ -72,6 +72,7 @@ p{
 			line-height: 100%;
 			text-align: left;
 			font-size:35vw;
+			text-shadow:20px 10px 10px #000;
 		}
 		.day-night{
 			font-size:0.25em;

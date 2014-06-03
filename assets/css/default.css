@@ -120,9 +120,8 @@ p {
   display: none;
   height: 100%;
   perspective: 1000;
-  background: #181F30;
+  background: transparent;
   opacity: 1;
-  -webkit-box-shadow: 2em 2em 3em #000;
   position: relative;
   -webkit-transition: all linear 0.25s;
   -moz-transition: all  linear 0.25s;
@@ -142,8 +141,9 @@ p {
   line-height: 100%;
   text-align: left;
   font-size: 35vw;
+  text-shadow: 20px 10px 10px #000;
 }
-/* line 76, ../../src/scss/default.scss */
+/* line 77, ../../src/scss/default.scss */
 .clock-container ul .day-night {
   font-size: 0.25em;
   font-size: 15vw;
@@ -152,18 +152,18 @@ p {
 }
 
 @media only screen and (orientation: landscape) {
-  /* line 87, ../../src/scss/default.scss */
+  /* line 88, ../../src/scss/default.scss */
   .clock-container ul {
     width: 100%;
     overflow: hidden;
   }
-  /* line 90, ../../src/scss/default.scss */
+  /* line 91, ../../src/scss/default.scss */
   .clock-container ul li {
     float: left;
     margin-left: 5%;
     font-size: 23vw;
   }
-  /* line 95, ../../src/scss/default.scss */
+  /* line 96, ../../src/scss/default.scss */
   .clock-container ul .sec {
     clear: left;
   }
