@@ -18,7 +18,7 @@ http://ronniechong.github.io/js-wallclock/
 
 
 ###Parameters###
-`var wallClock = new wallClock(offsetvalue);` where *offsetvalue* is to a value to offset the tilt for RotateX and RotateY 
+`var wallClock = new wallClock(offsetvalue);` where *offsetvalue* is a value to offset the tilt for RotateX and RotateY 
 
 
 ###Devices/OS Tested ###
