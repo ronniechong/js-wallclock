@@ -1,19 +1,21 @@
-#js-wallclock#
+##js-wallclock##
 
-Experimentation on mobile motion event
+An experimentation on mobile motion event
 
-##Demo##
+###Demo###
+
+This is only viewable on mobile devices
+
 http://ronniechong.github.io/js-wallclock/
 
-##Usage##
+###Usage###
 * Include the CSS and JS scripts at the bottom of the body
 * Instantiate wallClock class
 
-<code>
-   var wallClock = new wallClock(50);
-   
-   wallClock.init();
-</code>
+      `var wallClock = new wallClock(50);`
+      
+      `wallClock.init();`
 
-##Parameters##
+
+###Parameters###
 `var wallClock = new wallClock(offsetvalue);` where *offsetvalue* is to a value to offset the tilt for RotateX and RotateY 
