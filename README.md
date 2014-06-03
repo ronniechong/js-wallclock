@@ -12,9 +12,12 @@ http://ronniechong.github.io/js-wallclock/
 * Include the CSS and JS scripts at the bottom of the body
 * Instantiate wallClock class
 
-      `var wallClock = new wallClock(50);`
-      
-      `wallClock.init();`
+
+
+        <script type="text/javascript">
+           var wallClock = new wallClock(50);
+         wallClock.init();
+        </script>
 
 
 ###Parameters###
