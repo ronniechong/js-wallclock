@@ -22,8 +22,11 @@ http://ronniechong.github.io/js-wallclock/
 
 
 ###Devices/OS Tested ###
-Devices | OS | Web Browser |Outcome
+Devices | Operating System | Web Browser |Outcome
 :--|:--|:--|:--
+Nexus 5 | Android 4.4 | Chrome | OK
 Nexus 4 | Android 4.4 | Chrome | OK
 Nexus 4 | Andriod 4.4 | Dolphin | Buggy
-iPod Gen5 | iOS7 | Safari | OK
+iPod Generation 5 | iOS7 | Safari | OK
+Samsung Galaxy S3 | Android 4.3 | Stock | OK
+Samsung Galaxy S3 | Android 4.0 | Stock | OK
