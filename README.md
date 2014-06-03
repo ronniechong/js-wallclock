@@ -19,3 +19,11 @@ http://ronniechong.github.io/js-wallclock/
 
 ###Parameters###
 `var wallClock = new wallClock(offsetvalue);` where *offsetvalue* is to a value to offset the tilt for RotateX and RotateY 
+
+
+###Devices/OS Tested ###
+Devices | OS | Web Browser |Outcome
+:--|:--|:--|:--
+Nexus 4 | Android 4.4 | Chrome | OK
+Nexus 4 | Andriod 4.4 | Dolphin | Buggy
+iPod Gen5 | iOS7 | Safari | OK
