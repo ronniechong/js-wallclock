@@ -16,7 +16,7 @@ http://ronniechong.github.io/js-wallclock/
 
         <script type="text/javascript">
            var wallClock = new wallClock(50);
-         wallClock.init();
+           wallClock.init();
         </script>
 
 
