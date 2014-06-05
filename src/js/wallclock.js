@@ -61,9 +61,13 @@ function wallClock(offval){
 		if (typeof(param1)==='object'){
 			document.getElementById('output').innerHTML = 'Tilt: Y='+Math.round(param1[0]) + ', X=' + Math.round(param1[1]);
 			var rotX = (window.orientation==0) ? Math.round(param1[0] - this.offset):Math.round(param1[0]),
-				rotY = (window.orientation==0) ? Math.round(param1[1]) : Math.round(param1[1]+this.offset);
-			document.getElementById('wallclock').style.webkitTransform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
-			document.getElementById('wallclock').style.transform  = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
+				rotY = (window.orientation==0) ? Math.round(param1[1]) : Math.round(param1[1]+this.offset),
+				transformXY = 'rotateY('+rotY+'deg) rotateX('+rotX+'deg)';
+				document.getElementById('wallclock').style.webkitTransform = transformXY;
+				document.getElementById('wallclock').style.MozTransform = transformXY;
+				document.getElementById('wallclock').style.msTransform = transformXY;
+				document.getElementById('wallclock').style.OTransform = transformXY;
+				document.getElementById('wallclock').style.transform = transformXY;
 		}
 	}
 }
