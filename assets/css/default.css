@@ -102,7 +102,7 @@ p {
 /* line 38, ../../src/scss/default.scss */
 .debug {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   font-size: 11px;
 }
@@ -140,7 +140,7 @@ p {
   letter-spacing: 150%;
   line-height: 100%;
   text-align: left;
-  font-size: 35vw;
+  font-size: 25vh;
   text-shadow: 20px 10px 10px #000;
 }
 /* line 77, ../../src/scss/default.scss */
