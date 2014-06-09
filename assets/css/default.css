@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Black+Ops+One);
-/* line 17, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,56 +20,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 9, ../../src/scss/default.scss */
 html,
 body {
   height: 100%;
 }
 
-/* line 13, ../../src/scss/default.scss */
 body {
   font-family: arial, sans-serif;
   font-size: 16px;
@@ -78,28 +67,24 @@ body {
   color: #fff;
 }
 
-/* line 20, ../../src/scss/default.scss */
 h1 {
   text-transform: uppercase;
   font-size: 1.8em;
   margin-bottom: 0.5em;
 }
 
-/* line 26, ../../src/scss/default.scss */
 p {
   line-height: 120%;
   margin-bottom: 0.5em;
   font-size: 1.2em;
 }
 
-/* line 32, ../../src/scss/default.scss */
 .container {
   position: relative;
   overflow: hidden;
   height: 100%;
 }
 
-/* line 38, ../../src/scss/default.scss */
 .debug {
   position: fixed;
   bottom: 0;
@@ -107,7 +92,6 @@ p {
   font-size: 11px;
 }
 
-/* line 45, ../../src/scss/default.scss */
 #info {
   display: block;
   font-family: Arial,sans-serif;
@@ -115,7 +99,6 @@ p {
   padding: 25% 10%;
 }
 
-/* line 52, ../../src/scss/default.scss */
 .clock-container {
   display: none;
   height: 100%;
@@ -128,13 +111,11 @@ p {
   -o-transition: all  linear 0.25s;
   transition: all  linear 0.25s;
 }
-/* line 65, ../../src/scss/default.scss */
 .clock-container ul {
   padding: 5%;
   font-family: "Black Ops One", cursive;
   font-size: 6em;
 }
-/* line 69, ../../src/scss/default.scss */
 .clock-container ul li {
   display: block;
   letter-spacing: 150%;
@@ -143,7 +124,6 @@ p {
   font-size: 25vh;
   text-shadow: 20px 10px 10px #000;
 }
-/* line 77, ../../src/scss/default.scss */
 .clock-container ul .day-night {
   font-size: 0.25em;
   font-size: 15vw;
@@ -152,18 +132,15 @@ p {
 }
 
 @media only screen and (orientation: landscape) {
-  /* line 88, ../../src/scss/default.scss */
   .clock-container ul {
     width: 100%;
     overflow: hidden;
   }
-  /* line 91, ../../src/scss/default.scss */
   .clock-container ul li {
     float: left;
     margin-left: 5%;
     font-size: 23vw;
   }
-  /* line 96, ../../src/scss/default.scss */
   .clock-container ul .sec {
     clear: left;
   }
