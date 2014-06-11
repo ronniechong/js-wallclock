@@ -5,10 +5,12 @@
   "author": "Ronnie Chong <ronniechong@gmail.com>",
   "description": "An experimentation on mobile motion event",
   "keywords": [
-    "jquery",
-    "count",
-    "statistics",
-    "chart"
+    "javascript",
+    "wallclock",
+    "time",
+    "mobile",
+    "device motion",
+    "accelerometer"
   ],
   "repository": {
     "type": "git",
