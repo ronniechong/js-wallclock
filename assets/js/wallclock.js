@@ -8,7 +8,7 @@ function wallClock(offval){
 	
 	//Properties
 	this.version = '1.0';
-	this.offset = (offval==undefined)?0:offval;	//offset rotatex and rotatey
+	this.offset = (typeof (offval) === 'undefined')?0:offval;	//offset rotatex and rotatey
 
 	//Methods
 	this.init = function(){
