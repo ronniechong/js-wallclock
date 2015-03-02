@@ -48,6 +48,18 @@ p{
 	text-align:center;
 	padding:25% 10%;
 }
+#settings{
+	display:none;
+	position:fixed;
+	top:15px;
+	right:15px;
+	z-index:100;
+
+	a{
+		color:#ffffff;
+		font-size:2em;
+	}
+}
 
 .clock-container{
 	display:none;

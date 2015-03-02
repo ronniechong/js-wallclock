@@ -51,7 +51,7 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -97,6 +97,18 @@ p {
   font-family: Arial,sans-serif;
   text-align: center;
   padding: 25% 10%;
+}
+
+#settings {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+}
+#settings a {
+  color: #ffffff;
+  font-size: 2em;
 }
 
 .clock-container {

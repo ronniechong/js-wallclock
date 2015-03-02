@@ -7,8 +7,8 @@ Copyright (c) 2014 Ronnie Chong
 function wallClock(offval){
 	
 	//Properties
-	this.version = '1.0';
-	this.offset = (typeof (offval) === 'undefined')?0:offval;	//offset rotatex and rotatey
+	this.version 	= '1.0';
+	this.offset 	= (typeof (offval) === 'undefined')?0:offval;	//offset rotatex and rotatey
 
 	//Methods
 	this.init = function(){
@@ -18,18 +18,27 @@ function wallClock(offval){
  			var clockTimer = setInterval(this.fnUpdateTime, 1000);	
 			document.getElementById('wallclock').style.display = "block";
 			document.getElementById('info').style.display = "none";
+			document.getElementById('settings').style.display = "block";
 			this.fnMotionDevice();
+			this.fnButtonListener();
 		}
+	}
+	//set button listener
+	this.fnButtonListener = function(){
+		document.getElementById("calibrate").addEventListener("click", function(){
+
+			return false;
+		});
 	}
 
 	//Get time
 	this.fnUpdateTime = function(){
 		'use strict';
-		var currDate = new Date(),
-			currHour = (currDate.getHours()>12)? currDate.getHours() - 12: (currDate.getHours()<10)? '0'+ currDate.getHours():currDate.getHours(),
-			currMin = (currDate.getMinutes()<10)?'0'+currDate.getMinutes():currDate.getMinutes(),
-			currSec = (currDate.getSeconds()<10)?'0'+currDate.getSeconds():currDate.getSeconds(),
-			dayNight =(currDate.getHours()>=12)?'pm':'am';
+		var currDate 	= new Date(),
+			currHour 	= (currDate.getHours()>12)? currDate.getHours() - 12: (currDate.getHours()<10)? '0'+ currDate.getHours():currDate.getHours(),
+			currMin 	= (currDate.getMinutes()<10)?'0'+currDate.getMinutes():currDate.getMinutes(),
+			currSec 	= (currDate.getSeconds()<10)?'0'+currDate.getSeconds():currDate.getSeconds(),
+			dayNight 	= (currDate.getHours()>=12)?'pm':'am';
 
 		document.getElementsByClassName('hour')[0].innerHTML = currHour;
 		document.getElementsByClassName('min')[0].innerHTML = currMin;
@@ -37,9 +46,14 @@ function wallClock(offval){
 		document.getElementsByClassName('day-night')[0].innerHTML = dayNight;
 	}
 
+	
+
 	//Motion listeners
 	this.fnMotionDevice = function(){
-		var that = this;
+		var that  	= this,
+			param 	= that.fnGetOrientation();
+		
+		//that.fnDetectTilt(param);
 		if (window.DeviceOrientationEvent) {
 		    window.addEventListener("deviceorientation", function () {
 		        that.fnDetectTilt([event.beta, event.gamma]);
@@ -53,6 +67,24 @@ function wallClock(offval){
 		        that.fnDetectTilt([orientation.x * 50, orientation.y * 50]);
 		    }, true);
 		}
+	}
+
+	//Read orientation
+	this.fnGetOrientation = function(){
+		if (window.DeviceOrientationEvent) {
+		    window.addEventListener("deviceorientation", function () {
+		        return [event.beta, event.gamma];
+		    }, true);
+		} else if (window.DeviceMotionEvent) {
+		    window.addEventListener('devicemotion', function () {
+		        return [event.acceleration.x * 2, event.acceleration.y * 2];
+		    }, true);
+		} else {
+		    window.addEventListener("MozOrientation", function () {
+		        return [orientation.x * 50, orientation.y * 50];
+		    }, true);
+		}
+
 	}
 
 	//Animate wallclock
