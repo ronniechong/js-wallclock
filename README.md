@@ -23,10 +23,13 @@ http://ronniechong.github.io/js-wallclock/
 ###Parameters###
 `var wallClock = new wallClock(offsetvalue);` where *offsetvalue* is a value to offset the tilt for RotateX and RotateY 
 
+###Calibration###
+Clicking the adjust icon on top right will recalibrate the orientation.
 
 ###Devices/OS Tested ###
 Devices | Operating System | Web Browser |Outcome
 :--|:--|:--|:--
+OnePlus One | Android 4.4 | Chrome | OK
 Nexus 5 | Android 4.4 | Chrome | OK
 Nexus 4 | Android 4.4 | Chrome | OK
 Nexus 4 | Andriod 4.4 | Dolphin | Buggy
