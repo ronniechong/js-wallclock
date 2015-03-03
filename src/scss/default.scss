@@ -58,6 +58,10 @@ p{
 	a{
 		color:#ffffff;
 		font-size:2em;
+		&:active,
+		&:focus{
+			font-size:1.75em;
+		}
 	}
 }
 

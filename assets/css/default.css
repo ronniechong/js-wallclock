@@ -110,6 +110,9 @@ p {
   color: #ffffff;
   font-size: 2em;
 }
+#settings a:active, #settings a:focus {
+  font-size: 1.75em;
+}
 
 .clock-container {
   display: none;
