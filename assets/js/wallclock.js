@@ -7,7 +7,7 @@ Copyright (c) 2014 Ronnie Chong
 function wallClock(offval){
 	
 	//Properties
-	this.version 		= '1.0';
+	this.version 		= '1.1';
 	this.orientation 	= [];
 	this.offset 		= (typeof (offval) === 'undefined')?0:offval;	//offset rotatex and rotatey
 
@@ -26,9 +26,12 @@ function wallClock(offval){
 	}
 	//set button listener
 	this.fnButtonListener = function(){
+		'use strict';
 		var that = this;
-		document.getElementById("calibrate").addEventListener("click", function(){
+
+		document.getElementById("calibrate").addEventListener("click", function(e){
 			that.offset = that.orientation[0];
+			e.preventDefault();
 			return false;
 		});
 	}
@@ -52,7 +55,7 @@ function wallClock(offval){
 
 	//Motion listeners
 	this.fnMotionDevice = function(){
-		var that  	= this;
+		var that = this;
 		
 		if (window.DeviceOrientationEvent) {
 		    window.addEventListener("deviceorientation", function () {
@@ -61,7 +64,7 @@ function wallClock(offval){
 		    }, true);
 		} else if (window.DeviceMotionEvent) {
 		    window.addEventListener('devicemotion', function () {
-		    	that.orientation = [event.acceleration.x * 2, event.acceleration.y * 2];
+		    	that.orientation = [event.acceleration.x * 2, event.acceleration.y * 2]; 
 		        that.fnDetectTilt(that.orientation);
 		    }, true);
 		} else {
